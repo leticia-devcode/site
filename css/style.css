@@ -1,0 +1,702 @@
+*{
+    font-family: "Poppins", serif;
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    background-color: black;
+}
+
+ 
+.interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* fazendo a rolagem do menu */
+html {
+    scroll-behavior: smooth;
+}
+/* aparecendo suavemente o conteudo */
+/* Transição para a imagem de fundo */
+body {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+/* Carregar lentamente a página */
+body.loaded {
+    opacity: 1;
+}
+
+.hero-site {
+    height: 98vh;
+    background-image: url(../images/lonovabg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    transition: opacity 2s ease-in-out; 
+}
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 2.5em;
+    line-height: 70px;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero span {
+    display: block;
+    font-weight: 800;
+    color: blue;
+    margin: 0px;
+   
+}
+
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-site button {
+    width: 220px;
+    height: 60px;
+}
+
+header .btn-contato button, .hero-site button{
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #112BBF;
+    cursor: pointer;
+    color: #3889F2;
+    transition: .5s;
+}
+/* Estilo para os ícones dentro do botão de contato */
+.contact-box button i {
+    font-size: 0.8rem; 
+}
+
+/* Estilo Neon para palavras específicas */
+.neon-effect {
+    color: #fff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    animation: neonEffectGlow 6s ease-in-out infinite;
+}
+
+/* Animação do efeito neon */
+@keyframes neonEffectGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    }
+    50% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+    }
+}
+
+.btn-contato {
+    position: relative;
+}
+
+button {
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #112BBF;
+    cursor: pointer;
+    color: #3889F2;
+    transition: 0.5s;
+    padding: 10px 20px;
+}
+
+/* Efeito Neon no botão */
+@keyframes neonButtonGlow {
+    0% { 
+        background-color: black; 
+        box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; 
+        color: #ff00ff; 
+    }
+    25% { 
+        background-color: black; 
+        box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; 
+        color: #00ffff; 
+    }
+    50% { 
+        background-color: black; 
+        box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14; 
+        color: #39ff14; 
+    }
+    75% { 
+        background-color: black; 
+        box-shadow: 0 0 5px #ff9900, 0 0 10px #ff9900; 
+        color: #ff9900; 
+    }
+    100% { 
+        background-color: black; 
+        box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; 
+        color: #ff00ff; 
+    }
+}
+
+/* Aplica animação neon ao botão */
+header .btn-contato button {
+    text-align: center;
+    width: 140px;
+    height: 50px;
+    animation: neonButtonGlow 6s ease-in-out infinite;
+}
+
+header .btn-contato button:hover, .hero-site button:hover{
+    background-color: #120640;
+    color: #3889F2;
+}
+
+/* Caixa de contato escondida inicialmente */
+.contact-box {
+    display: none; 
+    position: absolute;
+    top: 60px; 
+    left: 0;
+   
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 220px; 
+    z-index: 999; 
+}
+
+/* Estilo dos botões dentro da caixa de contato */
+.contact-box button {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    border: none; 
+    background-color: transparent; 
+    color: #fff; 
+    text-align: left; 
+    font-size: 0.9rem; 
+    padding: 8px 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para botões */
+.contact-box button:hover {
+  
+    color: #fff; 
+}
+
+
+.contact-box a {
+    text-decoration: none; 
+    width: 100%; 
+}
+
+
+/* Estilo do header */
+header{
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    width: 88px;
+    height: 100px;
+}
+
+header .menu-desktop nav ul{
+    list-style-type:none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .1s;
+    font-size: 1.5rem;
+}
+header {
+    z-index: 10;
+}
+
+section {
+    scroll-margin-top: 80px; 
+}
+header .menu-desktop nav ul li a:hover {
+    transform: scale(1.1);
+    font-size: 1.4rem; 
+}
+
+/* Estilo do Hero */
+
+.hero-site {
+    height: 98vh; 
+    background-image: url(../images/lonovabg.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    color: #fff;
+    transition: opacity 2s ease-in-out;
+}
+
+
+header .menu-desktop nav ul {
+    list-style-type: none;
+    border: 2px solid rgba(49, 47, 47, 0.137); 
+    background-color: rgba(37, 36, 36, 0.496); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 2.5em;
+    line-height: 70px;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero span{
+    display: block;
+    font-weight: 800;
+    color:blue;
+    margin: 0px;
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+}
+
+/* Animação Neon para "sala start 70x7" */
+@keyframes neonGlowText {
+    0% { 
+        color: #ff00ffb5; 
+        text-shadow: 0 0 5px #ff00ff97, 0 0 10px #ff00ff6a, 0 0 15px #ff00ff74;
+    }
+    25% { 
+        color: #00ffff75; 
+        text-shadow: 0 0 5px #00ffff58, 0 0 10px #00ffff9b, 0 0 15px #00ffff8a;
+    }
+    50% { 
+        color: #37ff1470; 
+        text-shadow: 0 0 5px #37ff1483, 0 0 10px #37ff147d, 0 0 15px #37ff148b;
+    }
+    75% { 
+        color: #ff990070; 
+        text-shadow: 0 0 5px #ff99008a, 0 0 10px #ff990083, 0 0 15px #ff990089;
+    }
+    100% { 
+        color: #ff00ff81; 
+        text-shadow: 0 0 5px #ff00ff75, 0 0 10px #ff00ff78, 0 0 15px #ff00ff78;
+    }
+}
+
+/* Aplica o efeito neon à frase "sala start 70x7" */
+.sala-start {
+    font-size: 2.5rem;
+    animation: neonGlowText 6s ease-in-out infinite;
+    color: #ff00ff; 
+}
+/* Estilo para a seção sobre o criador */
+.sobre-criador .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre-criador .foto-criador-container,
+.sobre-criador .txt-sobre-container {
+    width: 50%;
+    padding: 20px;
+}
+
+.sobre-criador .foto-criador img {
+    max-width: 100%; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-criador .txt-sobre p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #fff;
+    text-align: justify;
+}
+
+.sobre-criador .foto-criador {
+    flex: 1;
+    padding: 20px;
+}
+
+.sobre-criador .foto-criador img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Adicionar uma transição suave na imagem */
+.sobre-criador img {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.loaded .sobre-criador img {
+    opacity: 1;
+}
+
+/* Animação do texto neon */
+@keyframes neonGlow {
+    0% { 
+        color: #ff00ffb5; 
+        text-shadow: 0 0 5px #ff00ff97, 0 0 10px #ff00ff6a, 0 0 15px #ff00ff74;
+    }
+    25% { 
+        color: #00ffff75; 
+        text-shadow: 0 0 5px #00ffff58, 0 0 10px #00ffff9b, 0 0 15px #00ffff8a;
+    }
+    50% { 
+        color: #37ff1470; 
+        text-shadow: 0 0 5px #37ff1483, 0 0 10px #37ff147d, 0 0 15px #37ff148b;
+    }
+    75% { 
+        color: #ff990070; 
+        text-shadow: 0 0 5px #ff99008a, 0 0 10px #ff990083, 0 0 15px #ff990089;
+    }
+    100% { 
+        color: #ff00ff81; 
+        text-shadow: 0 0 5px #ff00ff75, 0 0 10px #ff00ff78, 0 0 15px #ff00ff78;
+    }
+}
+
+/* sessão video */
+/* Estilo do Neon na frase */
+.neon-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: neonGlow 6s ease-in-out infinite;
+}
+
+@keyframes neonGlow {
+    0% { 
+        color: #ff00ffb5; 
+        text-shadow: 0 0 5px #ff00ff97, 0 0 10px #ff00ff6a, 0 0 15px #ff00ff74;
+    }
+    25% { 
+        color: #00ffff75; 
+        text-shadow: 0 0 5px #00ffff58, 0 0 10px #00ffff9b, 0 0 15px #00ffff8a;
+    }
+    50% { 
+        color: #37ff1470; 
+        text-shadow: 0 0 5px #37ff1483, 0 0 10px #37ff147d, 0 0 15px #37ff148b;
+    }
+    75% { 
+        color: #ff990070; 
+        text-shadow: 0 0 5px #ff99008a, 0 0 10px #ff990083, 0 0 15px #ff990089;
+    }
+    100% { 
+        color: #ff00ff81; 
+        text-shadow: 0 0 5px #ff00ff75, 0 0 10px #ff00ff78, 0 0 15px #ff00ff78;
+    }
+}
+
+.video-section {
+    padding: 60px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: justify; 
+}
+
+.video-box {
+    max-width: 600px; 
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* sessão serviços */
+
+.servicos {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #000;
+}
+
+.servicos h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 23%; 
+    height: 400px;
+    position: relative;
+    text-align: center;
+    border: 4px solid transparent;
+    animation: neonBorder 10s infinite;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+@keyframes neonBorder {
+    0% {
+        border-color: #ff4f4f;
+        box-shadow: 0 0 10px #ff4f4f, 0 0 20px #ff4f4f, 0 0 30px #ff4f4f;
+    }
+    25% {
+        border-color: #ffd700;
+        box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+    }
+    50% {
+        border-color: #4fff4f;
+        box-shadow: 0 0 10px #4fff4f, 0 0 20px #4fff4f, 0 0 30px #4fff4f;
+    }
+    75% {
+        border-color: #4f4fff;
+        box-shadow: 0 0 10px #4f4fff, 0 0 20px #4f4fff, 0 0 30px #4f4fff;
+    }
+    100% {
+        border-color: #ff4f4f;
+        box-shadow: 0 0 10px #ff4f4f, 0 0 20px #ff4f4f, 0 0 30px #ff4f4f;
+    }
+}
+
+
+/* Fim serviços */
+/* ESTILO DO RODAPÉ */
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff14;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+
+}
+
+.borda {
+    border-top: 2px solid #45ABD7;
+}
+
+footer .line-footer p i {
+    color: black;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: black;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+      
+        .hero-site {
+            padding: 0 15px; 
+            background-size: contain; 
+            background-position: center; 
+        }
+    
+       
+        .hero-site .txt-hero {
+            padding: 0 px; 
+            text-align: center;
+        }
+    
+        .hero-site .txt-hero h1 {
+            font-size: 1.5rem; 
+            line-height: 1.1; 
+        }
+    }
+    .hero-site {
+        background-size: 200%; 
+    }
+    
+    /* logo em dispositivos pequenos */
+    .logo {
+        display: none;
+        size: 80px; 
+    }
+
+    /* Ajustes para o botão de contato */
+    .btn-contato {
+        position: fixed;
+        left: 0px; 
+        top: 20px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        padding: 10px 15px; 
+        border-radius: 5px;
+    }
+
+   
+    body {
+        padding-top:0px 15px;
+    }
+
+    /*menu em dispositivos pequenos */
+    .menu-desktop {
+        display: none;
+    }
+
+    /* Configuração para a seção de serviços */
+    .servicos h2{
+        font-size: 29px;
+    }
+    .servicos .box {
+        width: 100%;
+        max-width: 100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Ajuste para a seção "sobre" */
+    .sobre-criador .interface {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    .sobre-criador .foto-criador-container,
+    .sobre-criador .txt-sobre-container {
+        width: 100%;         
+        padding: 0;        
+    }
+
+    .sobre-criador .foto-criador img {
+        width: 100%;
+       max-width: 400px;
+        height: auto;         
+        margin-bottom: 20px;   
+    }
+
+    .sobre-criador .txt-sobre {
+        text-align: justify;  
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px;
+    }
+
+    /* Configuração dos cards */
+    .servicos{
+        padding: 0 7.6px;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;   
+        width: 100%;           
+        padding: 0 15px;     
+          
+    }
+
+    .card {
+        width: 90%;            
+        max-width: 265px;     
+        margin: 10px 0;        
+        overflow: hidden;    
+    }
+
+    .card img {
+        width: 100%;        
+        height: 100%;   
+        object-fit: cover;  
+    }
+
+    /* Ajustes no vídeo para telas pequenas */
+.video-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.video-box {
+    width: 100%; 
+    max-width: 1200px; /* Aumenta a largura máxima do vídeo */
+    padding: 0 15px; 
+}
+
+.video-box iframe, 
+.video-box video {
+    width: 100%; 
+    height: 400px; /* Define uma altura maior para o vídeo */
+    display: block;
+    margin: 0 auto; 
+}
+
+    
+    
+}
