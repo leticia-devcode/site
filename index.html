@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Fim Google Fonts -->
+    <!-- BOOTSTRAO ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!--FIM BOOTSTRAO ICONS -->
+
+    <title>Sala Start 70x7</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <section class="logo">
+                <a href="#"><img src="images/lonovabg.png" alt="Logo"></a>
+                <!-- 88 altura por 88 largura -->
+            </section>
+            <section class="menu-desktop">
+                <nav>
+                    <ul>
+                        <li><a href="#">INÍCIO</a></li>
+                        <li><a href="#video">VÍDEO</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#servicos">SERVIÇOS</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="btn-contato">
+                <button onclick="toggleContactBox()">
+                    CONTATO
+                </button>
+                <div class="contact-box" id="contactBox">
+                    <a href="https://www.instagram.com/salastart_/" target="_blank">
+                        <button>
+                            <i class="bi bi-instagram"></i> INSTAGRAM
+                        </button>
+                    </a>
+                    <button>
+                        <i class="bi bi-envelope-at-fill"></i> EMAIL
+                    </button>
+                    <a href="https://wa.me/5561999763428?text=Ol%C3%A1%2C%20como%20est%C3%A3o%3F%20Gra%C3%A7a%20e%20paz%20%E2%9C%9D%EF%B8%8F%E2%9D%A4%EF%B8%8F"
+                        target="_blank">
+                        <button>
+                            <i class="bi bi-whatsapp"></i> WHATSAPP
+                        </button>
+                    </a>
+                </div>
+            </section>
+            <script>
+                
+                function toggleContactBox() {
+                    const contactBox = document.getElementById("contactBox");
+                    contactBox.style.display = contactBox.style.display === "block" ? "none" : "block";
+                }
+
+              
+                window.addEventListener('load', function () {
+                    document.body.classList.add('loaded');
+                });
+            </script>
+    
+    </header>
+
+    <section class="hero-site">
+        <div class="interface">
+            <div class="txt-hero">
+                <br><br><br><br><br> <BR><BR><BR></BR></BR></BR>
+                <br><br><br><br><br> <BR>
+                <h1><span class="sala-start">SALA START 70x7!</span></h1>
+            </div>
+        </div>
+    </section>
+    <!-- video -->
+  
+                <section class="video-section" id="video"> 
+                    <div class="interface">
+                        <div class="content">
+                            <div class="text-content">
+                                <h2 class="neon-text">CONHEÇA UM POUCO DO NOSSO TRABALHO</h2>
+                                <p>
+                                    Em breve teremos lançamentos no nosso canal no YOUTUBE, se inscreva e acompanhe o 
+                                    <a href="https://www.youtube.com/@SALASTART70X7-d7n" target="_blank">
+                                        <span class="neon-effect">Canal!</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="video-box">
+                             <video src="#" controls poster="images/lonovabg.png"></video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+
+<!-- Seção sobre o Criador da Sala Start 70x7 -->
+<section class="sobre-criador" id="sobre">
+    <div class="interface">
+        <div class="foto-criador-container">
+            <div class="foto-criador">
+                <img src="images/gabriel-removebg-preview.png" alt="Foto dos Criadores">
+            </div>
+        </div>
+        <div class="txt-sobre-container">
+            <div class="txt-sobre">
+                <h2 style="text-align: center;"><span class="sala-start">SOBRE A SALA</span></h2>
+                <p>
+                    Bem-vindos à Sala, um projeto que visa acolher e amar, levando nossa adoração a Cristo e
+                    compartilhando o amor dele por meio de cada ministração.
+                    O projeto começou há mais de 1 ano, quando o fundador Sanderson Gabriel, popularmente conhecido como
+                    Gabriel Garcez, estava orando em sua casa, buscando criar um ministério gospel. Assim, a “SALA
+                    START” representa o local e o início do projeto.
+                    Com o tempo, enquanto o projeto ainda estava no papel, ele conheceu outras pessoas que têm o mesmo empenho em cumprir o <span class="neon-effect">IDE</span>. Assim, iniciou-se uma grande parceria que sempre
+                    será para a honra e a glória do
+                    nosso Senhor <span class="neon-effect">Jesus</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+
+    <script>
+   
+        function toggleContactBox() {
+            const contactBox = document.getElementById("contactBox");
+            contactBox.style.display = (contactBox.style.display === "block") ? "none" : "block";
+        }
+
+        
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+   
+    <!-- Seção Serviços -->
+    <section class="servicos" id="servicos">
+        <div class="interface">
+            <h2>NOSSOS <span class="neon-effect">SERVIÇOS</span></h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/exemplo1.jpg" alt="Serviço 1">
+                    <div class="card-legend">
+                        <p>Contrato para eventos</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/exempo2.jpg" alt="Serviço 2">
+                    <div class="card-legend">
+                        <p>Contrato para casamentos </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/exemplo3.jpg" alt="Serviço 3">
+                    <div class="card-legend">
+                        <p>Contrato para igrejas </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/exemplo4.jpg" alt="Serviço 4">
+                    <div class="card-legend">
+                        <p>Ações sociais</p>
+                    </div>
+                </div>
+            </div> <br><br>
+            <h3><a href="https://wa.me/5561999763428?text=Ol%C3%A1%2C%20como%20est%C3%A3o%3F%20Gra%C3%A7a%20e%20paz%20%E2%9C%9D%EF%B8%8F%E2%9D%A4%EF%B8%8F"
+                    target="_blank">SAIBA MAIS</a></h2>
+        </div>
+    </section>
+
+    <!-- fim serviços -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="container" style="text-align: end;">
+                        <p>Líder Geral: SANDERSON GABRIEL <br>
+                            SALA START 70x7 <br>
+                            CNPJ: 58.472.304/0001-31</p> <br>
+                        <p>Copyright © 2023. Todos os direitos reservados</p>
+                    </div>
+
+                </div>
+            </div><!--btn-social-->
+            <p>
+                <i class="bi bi-envelope-at-fill" style="color: aliceblue;"></i> contato <a style="color: aliceblue;"
+                    href="mailto:@leticiarodrigueswork@gmail.com">@leticiarodrigueswork@gmail.com</a>
+            <p>Desenvolvido por: Letícia Gomes </p> <br>
+            <div class="btn-social">
+                <a href="https://www.instagram.com/leticia_g_r_s/" target="_blank"> <button>
+                        <i class="bi bi-instagram"></i>
+                    </button></a>
+
+                <a href="https://api.whatsapp.com/send?phone=61994466824" target="_blank"> <button>
+                        <i class="bi bi-whatsapp"></i>
+                    </button></a>
+
+                <a href="https://www.linkedin.com/in/let%C3%ADcia-gomes-rodrigues-853697241/" target="_blank">
+                    <button>
+                        <i class="bi bi-linkedin"></i>
+                    </button></a>
+
+            </div> <!--line-footer-->
+
+            <div class="line-footer borda">
+
+</body>
+
+</html>
